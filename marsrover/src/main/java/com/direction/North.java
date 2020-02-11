@@ -1,8 +1,9 @@
 package com.direction;
 
 public class North extends Direction {
-  {
-    setDirection('N');
+
+  public North() {
+    this.direction = 'N';
   }
 
   @Override

@@ -1,8 +1,9 @@
 package com.direction;
 
 public class West extends Direction {
-  {
-    setDirection('W');
+
+  public West() {
+    this.direction = 'W';
   }
 
   @Override

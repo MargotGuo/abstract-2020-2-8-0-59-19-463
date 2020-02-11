@@ -1,11 +1,8 @@
 package com.direction;
 
 public abstract class Direction {
-  private char direction;
 
-  public void setDirection(char direction) {
-    this.direction = direction;
-  }
+  protected char direction;
 
   public abstract Direction turnLeft();
 
