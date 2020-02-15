@@ -1,8 +1,10 @@
 package com.direction;
 
+import java.util.Objects;
+
 public abstract class Direction {
 
-  protected char direction;
+  char direction;
 
   public abstract Direction turnLeft();
 
@@ -10,26 +12,15 @@ public abstract class Direction {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
     Direction direction1 = (Direction) o;
-
-    if (direction != direction1.direction) {
-      return false;
-    }
-
-    return true;
+    return direction == direction1.direction;
   }
 
   @Override
   public int hashCode() {
-    return (int) direction;
+    return Objects.hash(direction);
   }
 
   @Override
