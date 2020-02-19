@@ -13,15 +13,11 @@ public enum Direction {
   }
 
   public Direction turnLeft() {
-    Direction[] directions = Direction.values();
-    int index = this.ordinal();
-    return (index == 0) ? directions[directions.length - 1] : directions[index - 1];
+    return Direction.values()[(this.ordinal() + 3) % 4];
   }
 
   public Direction turnRight() {
-    Direction[] directions = Direction.values();
-    int index = this.ordinal();
-    return (index == directions.length - 1) ? directions[0] : directions[index + 1];
+    return Direction.values()[(this.ordinal() + 1) % 4];
   }
 
   @Override
